@@ -1,0 +1,52 @@
+/* Custom styles for responsiveness */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .custom-card {
+    width: calc(33.33% - 20px); /* 3 cards in a row with spacing */
+    margin-right: 15px; /* Adjust spacing between cards */
+  }
+}
+
+@media (max-width: 1400px) {
+  .custom-card {
+    width: calc(50% - 15px); /* 2 cards in a row with spacing */
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1336px) {
+  .custom-card {
+    width: calc(
+      (100% - 30px) / 3
+    ); /* Calculate card width for 3 cards in a row */
+    margin: 10px; /* Add spacing between cards */
+  }
+
+  .custom-card img {
+    max-height: 200px; /* Adjust image height */
+  }
+
+  .custom-card .card-title {
+    font-size: 1.2rem; /* Adjust title font size */
+  }
+
+  .custom-card .price {
+    font-size: 1rem; /* Adjust price font size */
+  }
+
+  .custom-card .card-text {
+    font-size: 0.9rem; /* Adjust card text font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-card {
+    width: calc(50% - 10px); /* 2 cards in a row with spacing */
+    margin-bottom: 20px; /* Adjust spacing between rows */
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-card {
+    width: 100%; /* Full width for single column */
+    margin-right: 0; /* Remove right margin */
+  }
+}

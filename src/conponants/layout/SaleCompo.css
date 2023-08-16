@@ -101,3 +101,73 @@ h5 {
 .product-card-button:hover {
   background-color: #e68200;
 }
+
+/* For screens up to 1400px (XXL) */
+@media (max-width: 1400px) {
+  .product-cards {
+    gap: 30px;
+  }
+}
+
+/* For screens up to 1200px (XL) */
+@media (max-width: 1200px) {
+  .product-card {
+    width: calc(33.33% - 40px);
+  }
+}
+
+/* For screens up to 992px (L) */
+@media (max-width: 992px) {
+  .product-card {
+    width: calc(50% - 40px);
+  }
+}
+
+/* For screens up to 768px (M) */
+@media (max-width: 768px) {
+  .product-cards {
+    justify-content: center;
+  }
+  .product-card {
+    width: calc(100% - 40px);
+  }
+  .sale-content {
+    margin-bottom: 20px;
+  }
+  .sale-heading {
+    font-size: 36px;
+  }
+  .product-card h2 {
+    font-size: 20px;
+  }
+  .product-card p {
+    font-size: 14px;
+  }
+  .product-price {
+    font-size: 14px;
+  }
+  .product-card-button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+/* For screens up to 576px (S) */
+@media (max-width: 576px) {
+  .sale-button {
+    font-size: 16px;
+  }
+  .product-card h2 {
+    font-size: 18px;
+  }
+  .product-card p {
+    font-size: 12px;
+  }
+  .product-price {
+    font-size: 12px;
+  }
+  .product-card-button {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}

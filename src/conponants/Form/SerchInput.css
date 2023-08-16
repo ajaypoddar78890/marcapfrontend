@@ -1,0 +1,44 @@
+/* SearchInput.css */
+
+/* Container for centering and spacing */
+.search-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px; /* Add spacing to the right */
+  margin: 10px 0; /* Add margin */
+}
+
+/* Default styles for the search input */
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 200px;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.search-button {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1100px) {
+  .search-input-container {
+    display: none; /* Hide the entire container */
+  }
+}
+/* Media queries for responsive design */
+@media (min-width: 1250px) and (max-width: 1370px) {
+  .search-input {
+    width: 150px;
+    font-size: 12px;
+    padding: 3px;
+    margin-right: 3px;
+  }
+}

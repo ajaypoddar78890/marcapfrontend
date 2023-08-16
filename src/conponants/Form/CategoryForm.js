@@ -1,9 +1,10 @@
 import React from "react";
+import "./SerchInput.css";
 
 const CategoryForm = ({ handleSubmit, value, setValue }) => {
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="pe-1" onSubmit={handleSubmit}>
         <div className="mb-3">
           <input
             value={value}

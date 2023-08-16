@@ -1,3 +1,4 @@
+/* Common styles */
 .form-box {
   max-width: 400px;
   background: #e2ecf8;
@@ -5,20 +6,19 @@
   border-radius: 16px;
   color: #010101;
   margin-top: 100px;
-  margin-left: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form {
   position: relative;
   display: flex;
   flex-direction: column;
-
   padding: 32px 24px 24px;
   gap: 16px;
   text-align: center;
 }
 
-/*Form text*/
 .title {
   font-weight: bold;
   font-size: 2.6rem;
@@ -30,7 +30,6 @@
   padding-left: 40px;
 }
 
-/*Inputs box*/
 .form-container {
   overflow: hidden;
   border-radius: 8px;
@@ -69,7 +68,6 @@
   text-decoration: underline;
 }
 
-/*Button*/
 .form button {
   background-color: #0066ff;
   color: #fff;
@@ -84,4 +82,21 @@
 
 .form button:hover {
   background-color: #005ce6;
+}
+
+/* Media Queries */
+@media (max-width: 450px) {
+  .form-box {
+    margin-top: 50px;
+  }
+
+  .subtitle {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .form-box {
+    max-width: 600px;
+  }
 }

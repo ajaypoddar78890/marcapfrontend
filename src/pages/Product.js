@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import toast from "react-hot-toast";
+import "./responsive.css";
 
 import Layout from "../conponants/layout/Layout";
 import { useNavigate } from "react-router-dom";
@@ -177,12 +177,12 @@ const Product = () => {
               </button>
             </div>
           </div>
-          <div className="col-md-9 bg-body-tertiary ">
+          <div className="col-md-10 col-lg-9 bg-body-tertiary ">
             <h1 className="text-center text-success"> ALL PRODUCTS</h1>
             <div className="d-flex flex-wrap">
               {products?.map((p) => (
                 <div
-                  class="card m-3 bg-light-subtle "
+                  class="card m-3 bg-light-subtle  custom-card"
                   style={{ width: "18rem", borderRadius: "15px" }}
                 >
                   <img

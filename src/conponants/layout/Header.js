@@ -1,4 +1,5 @@
 import React from "react";
+import "./Responsive.css";
 import { Toaster } from "react-hot-toast";
 import { Badge } from "antd";
 import { NavLink, Link } from "react-router-dom";
@@ -8,7 +9,6 @@ import SearchInput from "../Form/Searchinput";
 import useCategory from "../Customehooks/useCategory";
 import { useCart } from "../../context/Cart";
 
-// import Dashbord from "../../pages/user/Dashbord";
 const Header = () => {
   const [auth, Setauth] = useAuth();
   const categories = useCategory();
@@ -22,10 +22,17 @@ const Header = () => {
     localStorage.removeItem("auth");
     Toast.success("logout Successfully", {});
   };
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div className="container-fluid">
+          <Link
+            to="/"
+            className="navbar-brand fs-4 ps-3 ps-lg-5 fw-medium text-success"
+          >
+            MarCap
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -37,23 +44,23 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon" />
           </button>
+          <SearchInput />
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link
-              to="/"
-              className="navbar-brand fs-4 ps-5 fw-medium text-success"
-            >
-              MarCap
-            </Link>
-            <SearchInput />
-            <ul className="navbar-nav ms-auto  fs-5 mb-lg-0">
+            <ul className="navbar-nav ms-auto fs-5 mb-lg-0">
+              {/* ... Your navigation items ... */}
               <li className="nav-item">
-                <NavLink to="/" className="nav-link  " aria-current="page">
+                <NavLink to="/" className="nav-link" aria-current="page">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/product" className="nav-link ">
+                <NavLink to="/product" className="nav-link">
                   Product
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/contect" className="nav-link">
+                  Contact
                 </NavLink>
               </li>
               {/* <li className="nav-item">
@@ -76,7 +83,7 @@ const Header = () => {
                     </Link>
                   </li>
                   {categories?.map((c) => (
-                    <li>
+                    <li key={c.slug}>
                       <Link
                         className="dropdown-item"
                         to={`/category/${c.slug}`}
@@ -95,7 +102,7 @@ const Header = () => {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/login" className="nav-link" href="#">
+                    <NavLink to="/login" className="nav-link">
                       Login
                     </NavLink>
                   </li>
@@ -114,24 +121,23 @@ const Header = () => {
                     <ul className="dropdown-menu">
                       <li>
                         <NavLink to="/dashbord" className="dropdown-item">
-                          Dashbord
+                          Dashboard
                         </NavLink>
                       </li>
-
-                      <NavLink
-                        onClick={LogoutHandle}
-                        to="/login"
-                        className="nav-link"
-                        href="#"
-                      >
-                        Logout
-                      </NavLink>
+                      <li>
+                        <NavLink
+                          onClick={LogoutHandle}
+                          to="/login"
+                          className="dropdown-item"
+                        >
+                          Logout
+                        </NavLink>
+                      </li>
                     </ul>
                   </li>
                 </>
               )}
-
-              <li className="nav-item fs-1">
+              <li className="nav-item fs-3">
                 <Badge count={cart?.length} showZero>
                   <NavLink to="/cart" className="nav-link fs-4">
                     Cart

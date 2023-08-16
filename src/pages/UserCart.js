@@ -40,11 +40,11 @@ const CartPage = () => {
     <Layout>
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
-            <h1 className="text-center bg-light p-2 mb-1">
+          <div className="col-md-12 pt-5">
+            <h2 className="text-center  p-3 text-success mb-1">
               {`Hello ${auth?.token && auth?.user?.name}`}
-            </h1>
-            <h4 className="text-center">
+            </h2>
+            <h4 className="text-center text-success">
               {cart?.length
                 ? `You Have ${cart.length} items in your cart ${
                     auth?.token ? "" : "please login to checkout"
